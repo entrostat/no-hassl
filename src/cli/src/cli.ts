@@ -25,7 +25,7 @@ export class Cli {
     private generateMenu(): void {
         yargs.usage('$0 <cmd> [args]')
             .scriptName('nohassl');
-        this.activeCommands.forEach(command => command.register(yargs));
+        this.activeCommands.forEach(command => command.registerOnMenu(yargs));
         yargs.showHelpOnFail(true)
             .help()
             .argv;

@@ -14,7 +14,7 @@ export abstract class Command {
 
     abstract async run(args: yargs.Arguments): Promise<any>;
 
-    register(args: yargs.Argv) {
+    registerOnMenu(args: yargs.Argv) {
         args.command(this.commandDescription.command, this.commandDescription.description, (menu) => {
             this.commandDescription.options.forEach(option => {
                 menu.option(option.key, option.details);
