@@ -1,0 +1,31 @@
+{
+  "name": "no-hassl",
+  "version": "0.0.0",
+  "description": "The CLI used to generate the no-hassl configurations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "ts-node main.ts"
+  },
+  "keywords": [
+    "haproxy",
+    "letsencrypt",
+    "ssl",
+    "https",
+    "loadbalance"
+  ],
+  "author": "Kerren Ortlepp",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.1.6",
+    "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "@types/jest": "^23.3.9",
+    "@types/node": "^10.12.10",
+    "@types/yargs": "^12.0.1",
+    "nexe": "^2.0.0-rc.34",
+    "ts-jest": "^23.10.5",
+    "ts-node": "^7.0.1"
+  }
+}
