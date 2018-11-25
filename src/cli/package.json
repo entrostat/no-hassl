@@ -19,7 +19,9 @@
     "typescript": "^3.1.6"
   },
   "devDependencies": {
+    "@types/jest": "^23.3.9",
     "@types/node": "^10.12.10",
-    "nexe": "^2.0.0-rc.34"
+    "nexe": "^2.0.0-rc.34",
+    "ts-jest": "^23.10.5"
   }
 }
