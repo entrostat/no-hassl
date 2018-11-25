@@ -1,4 +1,5 @@
 import {Command} from "../command";
+import * as yargs from "yargs";
 
 export class HelloWorldCommand extends Command {
     commandDescription = {
@@ -15,7 +16,13 @@ export class HelloWorldCommand extends Command {
                 }
             }
         ]
+    };
+
+    async run(args: yargs.Arguments): Promise<void> {
+        const times = args.times;
+        for (let i = 0; i < times; i++) {
+            console.log('Hello World!');
+        }
+        return;
     }
-
-
 }

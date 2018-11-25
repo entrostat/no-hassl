@@ -5,7 +5,7 @@ import {HelloWorldCommand} from "./commands/hello-world/hello-world.command";
 export class Cli {
 
     private activeCommands: Command[] = [
-        new HelloWorldCommand();
+        new HelloWorldCommand()
     ];
 
     constructor() {

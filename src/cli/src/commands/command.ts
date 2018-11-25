@@ -12,7 +12,7 @@ interface CommandDescription {
 export abstract class Command {
     abstract commandDescription: CommandDescription;
 
-    abstract async run<T = any>(): Promise<T>;
+    abstract async run(args: yargs.Arguments): Promise<any>;
 
     register(args: yargs.Argv) {
         args.command(this.commandDescription.command, this.commandDescription.description, (menu) => {
@@ -20,7 +20,7 @@ export abstract class Command {
                 menu.option(option.key, option.details);
             });
             return menu;
-        });
+        }, this.run.bind(this));
     }
 
     sortAlphabetically(otherCommand: Command): -1|0|1 {
