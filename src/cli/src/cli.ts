@@ -7,14 +7,10 @@ export class Cli {
     private activeCommands: Command[] = [
         new HelloWorldCommand()
     ];
-
-    constructor() {
+    
+    async run() {
         this.sortCommandsAlphabetically();
         this.generateMenu();
-    }
-
-    async run() {
-
     }
 
     private sortCommandsAlphabetically(): void {
