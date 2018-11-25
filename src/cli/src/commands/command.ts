@@ -9,10 +9,10 @@ interface CommandDescription {
     }[];
 }
 
-export abstract class Command<T> {
+export abstract class Command {
     abstract commandDescription: CommandDescription;
 
-    abstract async run(): Promise<T>;
+    abstract async run<T = any>(): Promise<T>;
 
     register(args: yargs.Argv) {
         args.command(this.commandDescription.command, this.commandDescription.description, (menu) => {
