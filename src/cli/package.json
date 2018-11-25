@@ -1,0 +1,24 @@
+{
+  "name": "no-hassl",
+  "version": "0.0.0",
+  "description": "The CLI used to generate the no-hassl configurations.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "haproxy",
+    "letsencrypt",
+    "ssl",
+    "https",
+    "loadbalance"
+  ],
+  "author": "Kerren Ortlepp",
+  "license": "MIT",
+  "dependencies": {
+    "typescript": "^3.1.6"
+  },
+  "devDependencies": {
+    "@types/node": "^10.12.10"
+  }
+}
